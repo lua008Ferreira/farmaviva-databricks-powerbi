@@ -95,8 +95,6 @@ Lojas de uma mesma cidade têm a mesma coordenada original, o que empilharia as 
 - Os dados da Farmaviva são fictícios, mas o desenho segue as boas práticas que seriam exigidas em dados reais.
 
 
-![Dica de ferramenta por loja](dica_loja.png)
-
 ### Nota sobre "itens"
 Na tabela `agg_vendas_mensal`, a coluna `itens` conta **linhas de venda** (283.762), enquanto `quantidade` soma as **unidades vendidas** (442.830). O painel usa `quantidade`, para ficar consistente com o mapa e com o Databricks.
 
