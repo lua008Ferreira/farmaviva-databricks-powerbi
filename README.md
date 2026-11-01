@@ -94,15 +94,6 @@ Lojas de uma mesma cidade têm a mesma coordenada original, o que empilharia as 
 - **Rastreabilidade:** cada linha da bronze guarda o arquivo de origem e a data de ingestão.
 - Os dados da Farmaviva são fictícios, mas o desenho segue as boas práticas que seriam exigidas em dados reais.
 
-## Power BI
-
-![Página principal do relatório](pagina_principal.png)
-
-- **Modelo:** 4 relacionamentos 1:\* com filtro em uma direção (`dim_calendario`, `dim_loja`, `dim_produto` e `dim_cliente` para `fato_vendas`), e `dim_calendario` marcada como tabela de datas.
-- **Medidas DAX** (tabela `_Medidas`): Receita Líquida, Custo Total, Margem Bruta, Margem %, Itens Vendidos, Cupons, Ticket Médio, Itens por Cupom e Desconto %.
-- **Mapa 3D (Azure Maps):** camada de coluna 3D, uma coluna por loja (48), altura pela receita e cor por região.
-- **Dica de ferramenta personalizada:** ao passar o mouse numa coluna, uma página de dica mostra só loja, vendas, receita e margem, sem latitude nem longitude.
-- **Painel 3D:** colunas por mês, região e categoria, com filtros de período, região e canal, mix por categoria e participação dos canais. Usa a tabela `agg_vendas_mensal`.
 
 ![Dica de ferramenta por loja](dica_loja.png)
 
