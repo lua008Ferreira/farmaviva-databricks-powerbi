@@ -1,10 +1,11 @@
+
 # Farmaviva · Vendas de uma rede de farmácias com Databricks e Power BI
 
 Projeto de portfólio de ponta a ponta: dados fictícios de vendas de uma rede de **48 farmácias**, tratados no **Databricks** (arquitetura medalhão) e apresentados no **Power BI**, com um **mapa 3D do Brasil** (uma coluna por loja) e um **painel 3D** de evolução por mês, região e categoria.
 
 > **Dados 100% fictícios.** Nenhuma pessoa, loja ou venda é real.
 
-![Demonstração do relatório Farmaviva](imagens/farmaviva_demo.gif)
+![Demonstração do relatório Farmaviva](farmaviva_demo.gif)
 
 ## Resultados em números
 
@@ -95,7 +96,7 @@ Lojas de uma mesma cidade têm a mesma coordenada original, o que empilharia as 
 
 ## Power BI
 
-![Página principal do relatório](imagens/pagina_principal.png)
+![Página principal do relatório](pagina_principal.png)
 
 - **Modelo:** 4 relacionamentos 1:\* com filtro em uma direção (`dim_calendario`, `dim_loja`, `dim_produto` e `dim_cliente` para `fato_vendas`), e `dim_calendario` marcada como tabela de datas.
 - **Medidas DAX** (tabela `_Medidas`): Receita Líquida, Custo Total, Margem Bruta, Margem %, Itens Vendidos, Cupons, Ticket Médio, Itens por Cupom e Desconto %.
@@ -103,7 +104,7 @@ Lojas de uma mesma cidade têm a mesma coordenada original, o que empilharia as 
 - **Dica de ferramenta personalizada:** ao passar o mouse numa coluna, uma página de dica mostra só loja, vendas, receita e margem, sem latitude nem longitude.
 - **Painel 3D:** colunas por mês, região e categoria, com filtros de período, região e canal, mix por categoria e participação dos canais. Usa a tabela `agg_vendas_mensal`.
 
-![Dica de ferramenta por loja](imagens/dica_loja.png)
+![Dica de ferramenta por loja](dica_loja.png)
 
 ### Nota sobre "itens"
 Na tabela `agg_vendas_mensal`, a coluna `itens` conta **linhas de venda** (283.762), enquanto `quantidade` soma as **unidades vendidas** (442.830). O painel usa `quantidade`, para ficar consistente com o mapa e com o Databricks.
